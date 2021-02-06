@@ -45,7 +45,7 @@ public enum Sound {
 	public static Map<Sound, AudioClip> getList() {
 		Map<Sound, AudioClip> map = new HashMap<>();
         for (Sound type : Sound.values()) {
-        	map.put(type, Applet.newAudioClip(Sound.class.getClassLoader().getResource(AngelicSerenade.RES_PATH.substring(1) + getFileName(type))));
+        	map.put(type, Applet.newAudioClip(ClassLoader.getSystemResource(AngelicSerenade.RES_PATH.substring(1) + getFileName(type))));
         }
         return map;
 	}

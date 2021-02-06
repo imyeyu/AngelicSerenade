@@ -38,7 +38,7 @@ public enum BGM {
 		Map<BGM, Media> map = new HashMap<>();
 		URI uri;
         for (BGM type : BGM.values()) {
-        	uri = BGM.class.getClassLoader().getResource(AngelicSerenade.RES_PATH.substring(1) + getFileName(type)).toURI();
+        	uri = ClassLoader.getSystemResource(AngelicSerenade.RES_PATH.substring(1) + getFileName(type)).toURI();
         	map.put(type, new Media(uri.toString()));
         }
         return map;

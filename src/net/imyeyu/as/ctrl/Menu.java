@@ -10,6 +10,7 @@ import net.imyeyu.as.component.DialogTips;
 import net.imyeyu.as.service.BGMService;
 import net.imyeyu.as.view.ViewMenu;
 import net.imyeyu.engine.bean.BezierPoint;
+import net.imyeyu.engine.bean.Size;
 import net.imyeyu.engine.utils.CubicBezier;
 import net.imyeyu.itools.config.Config;
 
@@ -62,7 +63,7 @@ public class Menu extends ViewMenu {
 				} else {
 					canRun = false;
 					if (config.is("firstStartup")) {
-						DialogTips.instance().warning("允许 javaw.exe 使用高性能的图形渲染显卡可获得更好的流畅度");
+						DialogTips.instance().size(Size.M).msg("允许 javaw.exe 使用高性能的图形渲染显卡可获得更好的流畅度，并添加 JVM 启动参数 -Djavafx.animation.fullspeed=true");
 						config.put("firstStartup", false);
 					}
 				}
