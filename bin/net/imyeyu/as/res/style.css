@@ -1,0 +1,59 @@
+* {
+	-fx-font-size: 24;
+}
+/* 滚动面板 */
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+	-fx-background-color: #A43C4B;
+}
+/* 曲目选择列表 */
+.play-list {
+	-fx-background-color: transparent;
+}
+.play-list .scroll-bar {
+    -fx-scale-x: 0;
+}
+.play-list .cell {
+	-fx-background-color: transparent;
+}
+.play-list .cell:selected {
+	-fx-background-color: transparent;
+	-fx-background-image: url('/net/imyeyu/as/res/list_selected.png');
+	-fx-background-repeat: no-repeat;
+}
+.play-list:focused .cell:selected {
+	-fx-background-color: transparent;
+}
+.play-list .cell:selected Label {
+	-fx-text-fill: #000;
+}
+
+/* 曲谱编辑器进度条（pb 为全长进度，pb-track 为轨道进度） */
+.pb .track,
+.pb-track .track {
+	visibility: hidden;
+}
+.pb .thumb {
+	-fx-shape: "M0,0v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1V7h1V6h1V5h1V4h1V3h1V2h1V1h1V0H0z M7,20h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1H0v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1V20z";
+	-fx-min-width: 15;
+	-fx-max-width: 15;
+	-fx-min-height: 28;
+	-fx-max-height: 28;
+	-fx-pref-width: 15;
+	-fx-pref-height: 28;
+	-fx-translate-y: 4;
+	-fx-border-width: 0;
+	-fx-background-color: #F30;
+}
+.pb-track .thumb {
+	-fx-shape: "M8,16h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1V0H0v10h1v1h1v1h1v1h1v1h1v1h1v1h1v260h1V16z";
+	-fx-min-width: 14;
+	-fx-max-width: 14;
+	-fx-min-height: 254;
+	-fx-max-height: 254;
+	-fx-pref-width: 14;
+	-fx-pref-height: 254;
+	-fx-translate-y: 8;
+	-fx-border-width: 0;
+	-fx-background-color: #F30;
+}
